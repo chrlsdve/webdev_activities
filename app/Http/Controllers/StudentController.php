@@ -57,4 +57,9 @@ public function destroy(Student $student)
     return redirect('/students')->with('success', 'Student deleted.');
 }
 
+public function __construct()
+{
+    $this->middleware('auth');
+}
+
 }
